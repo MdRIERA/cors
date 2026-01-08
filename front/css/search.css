@@ -1,0 +1,95 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 24px;
+}
+
+/* Cabecera */
+.top {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.top h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Botón volver */
+.back {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #111;
+}
+
+.back:hover {
+  background: #f3f3f3;
+}
+
+/* Formulario */
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.search-form input {
+  padding: 10px 14px;
+  width: 260px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.search-form button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #f3f3f3;
+}
+
+/* Resultado */
+.result {
+  display: flex;
+  justify-content: center;
+}
+
+.result > div,
+.result {
+  text-align: center;
+}
+
+/* Card personaje */
+.result h2 {
+  margin-bottom: 12px;
+}
+
+.result img {
+  width: 220px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.result p {
+  margin-bottom: 6px;
+}
+
+/* Mensajes */
+.result:empty {
+  display: none;
+}

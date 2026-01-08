@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 24px;
+}
+
+/* Zona superior */
+.top {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.top h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Botón volver */
+.back {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.back:hover {
+  background: #f3f3f3;
+}
+
+/* Botones paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.pagination button {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  background: white;
+}
+
+.pagination button:hover {
+  background: #f3f3f3;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Grid de personajes: 5 por fila (si hay espacio) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+/* Card */
+.grid > div {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+  background: white;
+}
+
+.grid h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Responsive: baja columnas según pantalla */
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: repeat(4, minmax(140px, 1fr)); }
+}
+@media (max-width: 950px) {
+  .grid { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
+}
+@media (max-width: 650px) {
+  .grid { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
+}
+@media (max-width: 420px) {
+  .grid { grid-template-columns: 1fr; }
+}
